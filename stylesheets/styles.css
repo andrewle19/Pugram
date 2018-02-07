@@ -1,10 +1,7 @@
 @font-face {
   font-family: 'lakeshore';
   src: url('fonts/LAKESHOR-webfont.eot');
-  src: url('fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/LAKESHOR-webfont.woff') format('woff'),
-  url('fonts/LAKESHOR-webfont.ttf') format('truetype'),
-  url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
+  src: url('fonts/LAKESHOR-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/LAKESHOR-webfont.woff') format('woff'), url('fonts/LAKESHOR-webfont.ttf') format('truetype'), url('fonts/LAKESHOR-webfont.svg#lakeshore') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,15 +9,12 @@
 @font-face {
   font-family: 'airstreamregular';
   src: url('fonts/Airstream-webfont.eot');
-  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'),
-  url('fonts/Airstream-webfont.woff') format('woff'),
-  url('fonts/Airstream-webfont.ttf') format('truetype'),
-  url('fonts/Airstream-webfont.svg#airstreamregular') format('svg');
+  src: url('fonts/Airstream-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/Airstream-webfont.woff') format('woff'), url('fonts/Airstream-webfont.ttf') format('truetype'), url('fonts/Airstream-webfont.svg#airstreamregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-html,body {
+html, body {
   height: 100%;
 }
 
@@ -31,14 +25,13 @@ body {
   background: rgb(133, 145, 130);
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 .main-header {
   flex: 0 1 auto;
 }
-
 
 .logo-text {
   background: white;
@@ -52,7 +45,6 @@ a{
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-
 }
 
 .thumbnail-item {
@@ -60,7 +52,7 @@ a{
   min-width: 120px;
   max-width: 120px;
   border: 1px solid rgb(100%, 100%, 100%);
-  border: 1px solid rgba(100%,100%,100%, 0.8);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8);
 }
 
 .thumbnail-list {
@@ -71,28 +63,20 @@ a{
   list-style: none;
   padding: 0;
   white-space: nowrap;
-
   overflow-x: auto;
-
 }
-
 
 .thumbnail-image {
   display: block;
   width: 100%;
-  
 }
-
 
 .thumbnail-title {
   display: block;
-
   margin: 0;
   padding: 4px 10px;
-
-
-  background: rgb(96,125,139);
-  color: rgb(202,238,255);
+  background: rgb(96, 125, 139);
+  color: rgb(202, 238, 255);
   font-size: 18px;
 }
 
@@ -103,7 +87,7 @@ a{
   align-items: center;
 }
 
-.detail-image-frame{
+.detail-image-frame {
   position: relative;
   text-align: center;
 }
@@ -112,13 +96,12 @@ a{
   width: 80%;
 }
 
-.detail-image-title{
+.detail-image-title {
   position: absolute;
   bottom: -16px;
   left: 4px;
   font-family: airstreamregular;
   color: white;
-  text-shadow: rgba(0,0,0,0.9) 1px 2px 9px;
-
+  text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
   font-size: 40px;
 }
