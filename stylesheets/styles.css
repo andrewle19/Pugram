@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 10px;
-  background: rgb(133, 145, 130);
+  background: rgb(17, 17, 17);
 }
 
 a {
@@ -62,7 +62,7 @@ a {
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  white-space: nowrap;
+  white-space: nonwrap;
   overflow-x: auto;
 }
 
@@ -75,8 +75,8 @@ a {
   display: block;
   margin: 0;
   padding: 4px 10px;
-  background: rgb(96, 125, 139);
-  color: rgb(202, 238, 255);
+  background: rgb(17, 17, 17);
+  color: rgb(255, 252, 252);
   font-size: 18px;
 }
 
