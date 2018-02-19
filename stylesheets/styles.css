@@ -59,7 +59,7 @@ a {
   flex: 0 1 auto;
   order: 2;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
   padding: 0;
   white-space: nonwrap;
