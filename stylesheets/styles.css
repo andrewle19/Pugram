@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'lakeshore';
   src: url('fonts/LAKESHOR-webfont.eot');
@@ -104,4 +105,15 @@ a {
   color: white;
   text-shadow: rgba(0, 0, 0, 0.9) 1px 2px 9px;
   font-size: 40px;
+}
+
+.leftarrow {
+  font-size: 100px;
+  color: rgb(255, 252, 252);
+}
+.rightarrow {
+  font-size: 100px;
+  justify-content: flex-end;
+  transform: scaleX(-1);
+  color: rgb(255, 252, 252);
 }
