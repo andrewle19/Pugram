@@ -66,11 +66,11 @@ function addArrowClickHandler(arrow, direction) {
     }
     // for left cycle right to left looping back to end
     else {
-        count = 7;
+        count = 5;
         arrow.addEventListener('click', function(event) {
         // make sure the count stays positive
             if (count == 0) {
-                count = 7;
+                count = 5;
             } else {
                 count -= 1;
             }
@@ -84,7 +84,7 @@ function addArrowClickHandler(arrow, direction) {
 function cycleDetailView(count) {
     'use strict';
     var thumbnails = getThumbnailsArray();
-    setDetailsFromThumb(thumbnails[count % 7]);
+    setDetailsFromThumb(thumbnails[count % 5]);
 }
 
 function initializeArrowKeys() {
