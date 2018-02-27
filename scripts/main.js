@@ -4,7 +4,8 @@ var THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
 var LARROW_LINK_SELECTOR = '[data-image-role="leftarrow"]';
 var RARROW_LINK_SELECTOR = '[data-image-role="rightarrow"]';
 
-
+var count = 0;
+var currentpic;
 // sets the detail view with an image
 // Input: imageurl - name of image, titleText- text of the corrosponding image
 function setDetails(imageURL, titleText) {
@@ -38,6 +39,7 @@ function addThumbClickHandler(thumb) {
     'use strict';
     thumb.addEventListener('click', function(event) {
         event.preventDefault();
+        currentpic = imageFromThumb(thumb);
         setDetailsFromThumb(thumb);
     });
 }
@@ -50,6 +52,18 @@ function getThumbnailsArray() {
     return thumbnailArray;
 }
 
+// gets the current thumbnail index
+function getThumbnailsIndex(){
+    'use strict';
+    var thumb  = getThumbnailsArray();
+    for(var i = 0; i < thumb.length; i++){
+        if(imageFromThumb(thumb[i]) == currentpic){
+            return i;
+        }
+    }
+    return 0;
+}
+
 // add click for arrow keys depending on direction
 // Input: arrow object and direction - tell which direction the arrow is
 function addArrowClickHandler(arrow, direction) {
@@ -57,8 +71,9 @@ function addArrowClickHandler(arrow, direction) {
 
     // for right cycle left to right looping back to start
     if (direction == 'R') {
-        var count = 0;
+
         arrow.addEventListener('click', function(event) {
+            count = getThumbnailsIndex();
             count += 1;
             event.preventDefault();
             cycleDetailView(count);
@@ -66,11 +81,13 @@ function addArrowClickHandler(arrow, direction) {
     }
     // for left cycle right to left looping back to end
     else {
-        count = 5;
+
         arrow.addEventListener('click', function(event) {
         // make sure the count stays positive
+        // check the place you are in
+            count = getThumbnailsIndex();
             if (count == 0) {
-                count = 5;
+                count = 4;
             } else {
                 count -= 1;
             }
@@ -84,6 +101,7 @@ function addArrowClickHandler(arrow, direction) {
 function cycleDetailView(count) {
     'use strict';
     var thumbnails = getThumbnailsArray();
+    currentpic = imageFromThumb(thumbnails[count%5]);
     setDetailsFromThumb(thumbnails[count % 5]);
 }
 
